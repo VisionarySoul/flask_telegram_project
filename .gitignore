@@ -1,1 +1,22 @@
-/.env
+# Ignore virtual environment
+.venv/
+
+# Ignore environment file containing sensitive data
+.env
+
+# Ignore JetBrains IDE project files
+.idea/
+
+# Ignore SQLite database journal files
+*.db-journal
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore log files
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
