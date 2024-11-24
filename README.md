@@ -35,7 +35,7 @@ Follow these steps to set up the project:
 Clone the project repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/flask_telegram_project.git
+https://github.com/VisionarySoul/flask_telegram_project.git
 cd flask_telegram_project
 ```
 
