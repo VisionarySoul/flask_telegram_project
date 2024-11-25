@@ -1,26 +1,11 @@
 #!/bin/bash
 
-# Define the directory where your Python apps are located
-FLASK_DIR="./flask"
-TELEGRAM_DIR="./telegram_bot"
+# Run Flask app and redirect output to flask.log
+echo "Starting Flask app..."
+nohup python app.py > flask.log 2>&1 &
 
-# Install dependencies for Flask app
-echo "Installing dependencies for Flask app..."
-cd $FLASK_DIR
-pip install -r requirements.txt
+# Run Telegram bot and redirect output to telegram_bot.log
+echo "Starting Telegram bot..."
+nohup python telegram_bot.py > telegram_bot.log 2>&1 &
 
-# Install dependencies for Telegram bot
-echo "Installing dependencies for Telegram bot..."
-cd $TELEGRAM_DIR
-pip install -r requirements.txt
-
-# Run Flask app and Telegram bot in the background
-echo "Running Flask app..."
-cd $FLASK_DIR
-nohup python app.py &
-
-echo "Running Telegram bot..."
-cd $TELEGRAM_DIR
-nohup python telegram_bot.py &
-
-echo "Both services are running."
+echo "Both services are running. Check flask.log and telegram_bot.log for logs."
